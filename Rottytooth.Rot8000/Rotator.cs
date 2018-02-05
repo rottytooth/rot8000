@@ -10,7 +10,7 @@ namespace Rottytooth.Rot8000
     {
         public const int BMP_SIZE = 0x10000; // 65536
 
-        private static List<char> Mappings { get; set; }
+        public static List<char> Mappings { get; set; }
 
         private static int RotateNum { get; set; }
 
