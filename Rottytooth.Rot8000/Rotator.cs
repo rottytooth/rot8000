@@ -39,14 +39,16 @@ namespace Rottytooth.Rot8000
 
             for (int count = 0; count < toConvert.Length; count++)
             {
+                int charloc = Mappings.FindIndex(x => x == toConvert[count]);
+
                 // if it's out of range or a control character, don't rotate it, but add to the string
-                if (!Mappings.Contains(toConvert[count]))
+                if (charloc < 0)
                 {
                     outputString.Append(toConvert[count]);
                     continue;
                 }
 
-                int charloc = Mappings.FindIndex(x => x == toConvert[count]) + RotateNum;
+                charloc += RotateNum;
                 charloc %= Mappings.Count;
 
                 outputString.Append(Mappings[charloc]);
