@@ -55,3 +55,6 @@ bin/
 obj/
 /packages
 /.vs/Rottytooth.Rot8000/v15
+.vs/*
+.vs
+/TestResults/18f9ddb9-53da-43f8-96e6-0d6263d61cf2
