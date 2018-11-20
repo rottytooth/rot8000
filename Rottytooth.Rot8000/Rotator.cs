@@ -47,12 +47,14 @@ namespace Rottytooth.Rot8000
 
             for (int count = 0; count < toConvert.Length; count++)
             {
+                // if it is not in the mappings list, just add it directly (no rotation)
                 if (!Mappings.ContainsKey(toConvert[count]))
                 {
                     outputString.Append(toConvert[count]);
                     continue;
                 }
 
+                // otherwise, rotate it and add it to the string
                 outputString.Append(Mappings[toConvert[count]]);
             }
 

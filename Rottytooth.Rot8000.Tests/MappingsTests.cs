@@ -17,7 +17,7 @@ namespace Rottytooth.Rot8000.Tests
         }
 
         /// <summary>
-        /// Does it match what's previous live?
+        /// Does it match what's previously live?
         /// </summary>
         [TestMethod]
         public void MatchesPreviousIteration()
@@ -27,6 +27,9 @@ namespace Rottytooth.Rot8000.Tests
                 "흟촾ᮐ穀흟촾ѭ헑籝籙簶籕籒籗籔 흟촾쾭穀ﰊ簻簹簹簹짝簼簿簹쵣穀ᆉᏴ퓽휼⌼캇퓽휼쩨ѭͪ흟촾췱簻簹簺簼촾쾢켗짖ᅀ笶ယ쨐喇Ԫ칶ᐸ等穀筄쾢켗짖ͪᅆᬚཿ鯷퀎ౙὖ鯸Ẇ穀籍籗籜캁Ẇ笶쾢ᗦ쮳ͪ흟촾");
         }
 
+        /// <summary>
+        /// Another specific example from what's previously live
+        /// </summary>
         [TestMethod]
         public void MatchesPreviousIterationLatin()
         {
@@ -34,5 +37,7 @@ namespace Rottytooth.Rot8000.Tests
                 Rotator.Rotate(@"HNEre is asdioja doij !~12213123123 12312 3123123"),
                 "籑籗籎类籮 籲籼 籪籼籭籲籸米籪 籭籸籲米 簪粇簺簻簻簺簼簺簻簼簺簻簼 簺簻簼簺簻 簼簺簻簼簺簻簼");
         }
+
+        // FIXME: add a complete set of tests for previously live data
     }
 }
