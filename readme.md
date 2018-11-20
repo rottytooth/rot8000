@@ -2,12 +2,6 @@
 
 **rot8000** solves the burning question of the day: how to de-spoilerize text containing non-Western characters, in a universal way. Rot13, which rotates any text 13 characters through the alphabet, was great for Usenet days, so long as you only use the English alphabet. This is rot13 for the Unicode generation.
 
-Release history:
-*  2013: released for the [pl41nt3xt pavillion](http://pl41nt3xt.master-list2000.com/artists/danieltemkin.html ) of the Wrong biennial
-*  2013: [ate a lot of shit]( https://www.reddit.com/r/programming/comments/1q5g7m/rot13_for_the_unicode_generation/ ) because it didn't work so good for surrogate pairs
-*  2017: all fixed here ya go!
-*  2017: releasing open source so you can see how it works
-
 Rot8000 only works in the Basic Multilingual Plane, which covers languages in use today, including the commonly used CJK characters. If you want to write spoilers in Linear B, you might need another system. It rotates by 0x8000 or half the BMP (actually a bit less than 8000, as it leaves alone whitespace and surrogates). 
 
 See it in action: [rot8000.com](http://rot8000.com )
