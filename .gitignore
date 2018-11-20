@@ -53,3 +53,5 @@ Temporary Items
 
 bin/
 obj/
+/packages
+/.vs/Rottytooth.Rot8000/v15

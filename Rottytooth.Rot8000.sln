@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rottytooth.Rot8000", "Rottytooth.Rot8000\Rottytooth.Rot8000.csproj", "{41D7B9C7-6FD3-467F-A249-A74835CF25E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rottytooth.Rot8000.Tests", "Rottytooth.Rot8000.Tests\Rottytooth.Rot8000.Tests.csproj", "{E3793A5F-FC5B-4099-97B2-69ADE002A50D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{41D7B9C7-6FD3-467F-A249-A74835CF25E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41D7B9C7-6FD3-467F-A249-A74835CF25E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41D7B9C7-6FD3-467F-A249-A74835CF25E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41D7B9C7-6FD3-467F-A249-A74835CF25E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3793A5F-FC5B-4099-97B2-69ADE002A50D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3793A5F-FC5B-4099-97B2-69ADE002A50D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3793A5F-FC5B-4099-97B2-69ADE002A50D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3793A5F-FC5B-4099-97B2-69ADE002A50D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9A68DFC6-0786-4750-9B94-E89CF779FB5C}
+	EndGlobalSection
+EndGlobal
