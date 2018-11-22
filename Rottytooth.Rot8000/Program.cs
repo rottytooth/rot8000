@@ -12,7 +12,7 @@ namespace Rottytooth.Rot8000
         {
             if (args.Length > 0)
             {
-                Console.WriteLine(Rotator.Rotate(args[1]));
+                Console.WriteLine(Rotator.Rotate(args[0]));
             }
         }
     }
