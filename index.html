@@ -1,65 +1,79 @@
+@{
+    Layout = null;
+}
+
 <html>
-    <head>
-        <title>rot8000.com</title>
-        <style type="text/css">
-            body {
-                background-color: white;
-                font-family: Sans-Serif;
-                text-align: center;
-            }
-            h1 {
-                margin-bottom: 0.1em;
-            }
-            h2 {
-                font-size: 1em;
-                font-weight: normal;
-                margin: 0 auto 5em auto;
-            }
-            .arrow {
-                font-size: 2.0em;
-                font-weight: bold;
-                margin: 0;
-            }
-            .warning {
-                background-color: orange;
-                padding: 0.4em 0.75em;
-            }
-        </style>
-        <script type="text/javascript" src="rot8000.js"></script>
-        <script type="text/javascript">
-            var rotator = new rot8000();
+<head>
+    <title>rot8000.com</title>
+    <style type="text/css">
+        body {
+            background-color: white;
+            font-family: Sans-Serif;
+            text-align: center;
+        }
 
-            function checkquery()
-            {
-                if (window.location.search) {
-                    document.getElementById('enteredText').value = decodeURIComponent(window.location.search.slice(1));
-                }
-                update();
+        h1 {
+            margin-bottom: 0.1em;
+        }
+
+        h2 {
+            font-size: 1em;
+            font-weight: normal;
+            margin: 0 auto 5em auto;
+        }
+
+        .arrow {
+            font-size: 2.0em;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .warning {
+            background-color: orange;
+            padding: 0.4em 0.75em;
+        }
+        #permalink {
+            visibility: hidden;
+        }
+    </style>
+    <script type="text/javascript" src="rot8000.js"></script>
+    <script type="text/javascript">
+        var rotator = new rot8000();
+
+        function checkquery() {
+            if (window.location.search) {
+                document.getElementById('enteredText').value = decodeURIComponent(window.location.search.slice(1));
             }
+            update();
+        }
 
-            function keyclick()
-            {
-                if (window.location.search) {
-                    window.history.pushState({}, document.title, window.location.href.split('?')[0]);
-                }
-                update();
+        function keyclick() {
+            if (window.location.search) {
+                window.history.pushState({}, document.title, window.location.href.split('?')[0]);
             }
+            update();
+        }
 
-            function update()
-            {
-                document.getElementById('output').innerHTML = rotator.rotate(document.getElementById('enteredText').value);
+        function update() {
+            var original = document.getElementById('enteredText').value;
+            document.getElementById('output').innerHTML = rotator.rotate(original);
+            if (original) {
+                document.getElementById("permalink").style.visibility = "visible";
+                document.getElementById("permalink").href = "/index?" + original;
             }
-        </script>
-    </head>
-    <body onload="checkquery()">
-        
-        <h1>rot8000.com</h1>
-        <h2><a href="/info">about rot8000</a></h2>
+        }
+    </script>
+</head>
+<body onload="checkquery()">
 
-        <noscript><p><span class="warning"><em>Please enable JavaScript to use this page.</em></span></p></noscript>
+    <h1>rot8000.com</h1>
+    <h2><a href="/info">about rot8000</a></h2>
 
-        <p><textarea id="enteredText" cols="80" rows="12" maxlength="10000" onkeyup="keyclick()" onchange="keyclick()" autofocus></textarea></p>
-        <p class="arrow">↓</p>
-        <p><textarea id="output" cols="80" rows="12" readonly></textarea></p>
-    </body>
+    <noscript><p><span class="warning"><em>Please enable JavaScript to use this page.</em></span></p></noscript>
+
+    <p><textarea id="enteredText" cols="80" rows="12" maxlength="10000" onkeyup="keyclick()" onchange="keyclick()" autofocus></textarea></p>
+    <p class="arrow">↓</p>
+    <p><textarea id="output" cols="80" rows="12" readonly></textarea></p>
+    <p><a id="permalink">permalink</a></p>
+</body>
 </html>
