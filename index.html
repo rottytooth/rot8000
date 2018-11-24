@@ -32,7 +32,7 @@
             background-color: orange;
             padding: 0.4em 0.75em;
         }
-        #permalink {
+        #permalink, #reverseperm {
             visibility: hidden;
         }
     </style>
@@ -56,10 +56,14 @@
 
         function update() {
             var original = document.getElementById('enteredText').value;
-            document.getElementById('output').innerHTML = rotator.rotate(original);
+            var rotated = rotator.rotate(original);
+            document.getElementById('output').innerHTML = rotated;
             if (original) {
                 document.getElementById("permalink").style.visibility = "visible";
                 document.getElementById("permalink").href = "/index?" + original;
+
+                document.getElementById("reverseperm").style.visibility = "visible";
+                document.getElementById("reverseperm").href = "/index?" + rotated;
             }
         }
     </script>
@@ -74,6 +78,6 @@
     <p><textarea id="enteredText" cols="80" rows="12" maxlength="10000" onkeyup="keyclick()" onchange="keyclick()" autofocus></textarea></p>
     <p class="arrow">↓</p>
     <p><textarea id="output" cols="80" rows="12" readonly></textarea></p>
-    <p><a id="permalink">permalink</a></p>
+    <p><a id="permalink">permalink</a> &nbsp;&nbsp; <a id="reverseperm">reverse permalink</a></p>
 </body>
 </html>
