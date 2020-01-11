@@ -4,5 +4,10 @@
   },
   "devDependencies": {
     "jest": "^23.6.0"
+  },
+  "dependencies": {
+    "handlebars": "4.7.0",
+    "js-yaml": "3.13.1",
+    "lodash": "4.17.15"
   }
 }
