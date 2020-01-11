@@ -1,11 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2026
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rottytooth.Rot8000", "Rottytooth.Rot8000\Rottytooth.Rot8000.csproj", "{41D7B9C7-6FD3-467F-A249-A74835CF25E9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rottytooth.Rot8000.Tests", "Rottytooth.Rot8000.Tests\Rottytooth.Rot8000.Tests.csproj", "{E3793A5F-FC5B-4099-97B2-69ADE002A50D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{27C83431-40E1-4826-9357-09EA06B79897}"
+	ProjectSection(SolutionItems) = preProject
+		index.html = index.html
+		readme.md = readme.md
+		rot8000.js = rot8000.js
+		rot8000.min.js = rot8000.min.js
+		rot8000.test.js = rot8000.test.js
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
