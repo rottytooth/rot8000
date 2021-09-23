@@ -2,14 +2,17 @@
 
 **rot8000** solves the burning question of the day: how to de-spoilerize text containing non-Western characters, in a universal way. Rot13, which rotates any text 13 characters through the alphabet, was great for Usenet days, so long as you only use the English alphabet. This is rot13 for the Unicode generation.
 
-Rot8000 only works in the Basic Multilingual Plane, which covers languages in use today, including the commonly used CJK characters. If you want to write spoilers in Linear B, you might need another system. It rotates by 0x8000 or half the BMP (actually a bit less than 8000, as it leaves alone whitespace and surrogates). 
+Rot8000 only works in the Basic Multilingual Plane, which covers languages in use today, including the commonly used CJK characters. If you want to write spoilers in Linear B, you might need another system. It rotates by 0x8000 or half the BMP (actually a bit less than 8000, as it leaves alone whitespace and surrogates). For the most part, it leaves emoji alone (as most live outside of BMP).
 
-For JS, use the rot8000.min.js file.
+The C# version was created when rot13 still used a postback; when it went to JS, rot8000 did as well. Both the C# and JavaScript versions are here; if you just want to start rot8000ing stuff, the rot8000.min.js file is all you need.
 
-**Update 11/2018**: Project has been moved to JavaScript. When I began in 2013, rot13.com used a postback, and I followed suit. But after the recent attention on [Hacker News](https://news.ycombinator.com/item?id=18495518), I decided to update to JS, as rot13.com had.
+Rot8000 was created for the pl41nt3xt pavillion of text-based works, curated by A Bill Miller, for The Wrong (online) digital art biennale.
 
-While the JS version might be useful for more people, I'm keeping the C# code for Mastadon/Twitterbots. Also, the codeblocks that don't translate (whitespace, surrogates, etc) are still defined by output from the C# component, even in the JS version, due to JS's weird Unicode handling (those blocks are defined in the valid-code-point-transitions.json file).
+Discussions:
+* [Hacker News](https://news.ycombinator.com/item?id=28615855) (9/2021) 
+* [BoingBoing](https://boingboing.net/2021/09/22/the-rot8000-cipher-for-when-rot13-just-isnt-enough-letters.html) (9/2021)
+* [Hacker News](https://news.ycombinator.com/item?id=18495518) (11/2018)
 
-Tests in rot8000.test.js ensure reversability of BMP codepoints. **Jest** is needed to run tests.
+Tests in rot8000.test.js ensure reversability of BMP codepoints. **Jest** is needed to run tests. The JS version relies on the C# component to define whitespace, surrogates, etc, which appear in the valid-code-point-transitions.json.
 
 See it in action: [rot8000.com](http://rot8000.com )
