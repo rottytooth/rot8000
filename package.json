@@ -1,7 +1,25 @@
 {
+  "name": "rot8000",
+  "version": "0.0.1",
+  "description": "http://rot8000.com/info",
+  "main": "rot8000.js",
   "scripts": {
     "test": "jest"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rottytooth/rot8000.git"
+  },
+  "keywords": [
+    "rot8000",
+    "cipher"
+  ],
+  "author": "https://github.com/rottytooth",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/rottytooth/rot8000/issues"
+  },
+  "homepage": "https://github.com/rottytooth/rot8000#readme",
   "devDependencies": {
     "jest": "^23.6.0"
   }
