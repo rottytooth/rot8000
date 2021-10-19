@@ -9,10 +9,11 @@ The C# version was created when rot13 still used a postback; when it went to JS,
 Rot8000 was created for the pl41nt3xt pavillion of text-based works, curated by A Bill Miller, for The Wrong (online) digital art biennale.
 
 Discussions:
+* [Cory Doctorow: "ROT 8000 and what 'security' means"](https://pluralistic.net/2021/10/15/fargo-north-decoder/#on-trusting-trust) (10/2021)
 * [Hacker News](https://news.ycombinator.com/item?id=28615855) (9/2021) 
 * [BoingBoing](https://boingboing.net/2021/09/22/the-rot8000-cipher-for-when-rot13-just-isnt-enough-letters.html) (9/2021)
 * [Hacker News](https://news.ycombinator.com/item?id=18495518) (11/2018)
 
 Tests in rot8000.test.js ensure reversability of BMP codepoints. **Jest** is needed to run tests. The JS version relies on the C# component to define whitespace, surrogates, etc, which appear in the valid-code-point-transitions.json.
 
-See it in action: [rot8000.com](http://rot8000.com )
+See it in action: [rot8000.com](https://rot8000.com )
